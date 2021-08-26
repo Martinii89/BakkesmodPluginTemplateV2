@@ -40,7 +40,7 @@ void {{cookiecutter.plugin_name}}::Render()
 // Name of the menu that is used to toggle the window.
 std::string {{cookiecutter.plugin_name}}::GetMenuName()
 {
-	return "{{cookiecutter.plugin_name}}";
+	return "{{cookiecutter.plugin_name|lower}}";
 }
 
 // Title to give the menu
