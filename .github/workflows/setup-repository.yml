@@ -82,7 +82,7 @@ jobs:
           git checkout --orphan temp-branch && \
           git add . && \
           git commit -m 'Initial commit' && \
-          git push origin temp-branch:main -f
+          git push origin temp-branch:master -f
 
       - name: Remove secret REPO_SETUP_TOKEN
         # After re-initializing the repository, we can remove the `REPO_SETUP_TOKEN` secret.
