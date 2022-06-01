@@ -56,7 +56,7 @@ jobs:
         shell: bash
         # Remove all files and folder exepct .git/ and cookiecutter-temp/
         run: |
-          find ./ -maxdepth 4 \
+          find ./ -maxdepth 1 \
           ! -name '.git' \
           ! -name 'cookiecutter-temp' \
           ! -name '.' \
