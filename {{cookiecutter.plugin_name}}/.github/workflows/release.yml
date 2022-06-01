@@ -31,7 +31,7 @@ jobs:
 
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.0.2
-
+{% raw %}
     - name: Build
       run: msbuild /m /p:Configuration=Release /p:BakkesModPath=$env:GITHUB_WORKSPACE\plugin /p:Environment=GitHub $env:GITHUB_WORKSPACE\plugin\${{ env.SOLUTION_NAME }}.sln
 
@@ -41,3 +41,4 @@ jobs:
         files: ${{ github.workspace }}\plugin\plugins\${{ env.SOLUTION_NAME }}.dll
       env:
         GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
+{% endraw %}
