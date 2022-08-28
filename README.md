@@ -6,6 +6,15 @@
 1. Enter a Repository name and click `Create repository from template`
 1. Head over to the created repository and complete the setup.
 
+## Configure the repository so workflows can be added automatically
+
+1. In a new browser tab, go to [the token settings page of your account](https://github.com/settings/tokens).
+1. Click "generate new token".
+1. Assign any name like "workflow token", click the "workflow" check box (which will automatically select everything under "repo" as well), then scroll down and click "Generate token".
+1. Copy the token by clicking the icon with the two overlapping squares.
+1. In the other browser tab with your repository, click Settings -> Secrets -> Actions.
+1. Set the name of the secret to `REPO_SETUP_TOKEN` and paste the token, then click "Add secret"
+
 ## Complete setup
 
 1. In the a new repository, <a href="../../edit/master/cookiecutter.json">complete the project setup</a> by editing the `cookiecutter.json` file. 
